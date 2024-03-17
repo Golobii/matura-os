@@ -39,7 +39,7 @@ $(BUILD_DIR)/boot_sector.bin: $(BOOT_DIR)/boot_sector.asm
 $(KERNEL): $(BUILD_DIR)/kernel_entry.o $(OBJ_FILES)
 	$(LINKER) -m elf_i386 -o $@ -Ttext 0x1000 --entry kernel $^ --oformat binary
 
-$(BUILD_DIR)/kernel_entry.o: $(KERNEL_SRC_DIR)/kernel_entry.asm
+$(BUILD_DIR)/kernel_entry.o: $(BOOT_DIR)/kernel_entry.asm
 	$(ASM) $^ -f elf -o $@
 
 $(BUILD_DIR)/%.o: $(KERNEL_SRC_DIR)/%.c $(DEPS)
