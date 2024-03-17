@@ -1,4 +1,5 @@
 **/out.bin
+/build
 /random
 *.bin
 *.o

@@ -8,21 +8,21 @@ print_string_pm:
     pusha
 
     mov edx, VIDEO_MEMORY
-print_string_loop:
+print_string_pm_loop:
     mov al, [ebx]
     mov ah, WHITE_ON_BLACK
 
     cmp al, 0
-    je print_string_done
+    je print_string_pm_done
 
     mov [edx], ax
 
     add ebx, 1
     add edx, 2
 
-    jmp print_string_loop
+    jmp print_string_pm_loop
 
-print_string_done:
+print_string_pm_done:
     popa
     ret
 
@@ -34,12 +34,12 @@ print_string:
 
     mov bx, ax
     mov ah, 0x0e
-loop:
+print_string_loop:
     mov al, [bx]
     int 0x10
     add bx, 1
     cmp al, 0
-    jne loop
+    jne print_string_loop
 
     popa
     ret

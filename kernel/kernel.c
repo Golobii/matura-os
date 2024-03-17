@@ -1,5 +1,5 @@
-void main() {
-    char *videoMemory = (char *) 0xb8000;
+#include "stdio.h"
 
-    *videoMemory = 'X';
+void kernel() {
+    putc('X');
 }
