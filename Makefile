@@ -5,7 +5,7 @@ LINKER=ld
 EMULATOR=qemu-system-x86_64
 
 # Zastavice za compiler
-CFLAGS = -m32 -fno-pie -g -nostdlib -Wall -Wextra -Werror -ffreestanding
+CFLAGS = -m32 -fno-pie -g -nostdlib -Wall -Wextra -ffreestanding
 # Zastavice za emulator
 EFLAGS = -s -fda
 
