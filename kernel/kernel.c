@@ -1,5 +1,7 @@
 #include "stdio.h"
 
+const char *greeting = "Hewwo!!!!";
+
 void kernel() {
-    putc('X');
+    puts(greeting);
 }
