@@ -36,10 +36,16 @@
 *.xdy
 *.dvi
 *.pyg
+*.pygtex
 *.pdf
 *.hi
 *.sublime-workspace
 *.class
+*.xdv
+*.xml
+*.fls
+*-blx.bib
+*/_*
 
 ## PDF/A
 *.xmpi

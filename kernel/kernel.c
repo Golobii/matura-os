@@ -1,7 +1,7 @@
-#include "stdio.h"
-
-const char *greeting = "Hewwo!!!!";
+#include "../drivers/display.h"
 
 void kernel() {
-    puts(greeting);
+    init_tty();
+    putstr("Pozdravljeni v MaturaOS - najbolj povprecnem operacijskem sistemu");
+    putstr("Pozdravljeni v MaturaOS - najbolj povprecnem operacijskem sistemu");
 }

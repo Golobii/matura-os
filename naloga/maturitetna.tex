@@ -320,16 +320,21 @@ Na srečo obstajajo alternative. To so višji jeziki (npr. FORTRAN, C, Pascal,
 BASIC itd.), ki so bolj intuitivni. Za ta projekt sem se odločil za C. 
 
 \section{Osnova}
+Naredil sem novo datoteko, sedaj s končnjico ``.c". V njej sem začel pisanje jedra s tem, da sem
+napisal preprosto funkcijo ``kernel, " ki izpiše `X' na ekranu.
+    \begin{minted}{c}
+    void kernel() {
+        char *videoMemory = (char *)0xb8000;
 
-\begin{minted}{c}
-void main() {
-    char *videoMemory = (char *)0xb8000;
-
-    *videoMemory = 'X';
-}
-\end{minted}
+        *videoMemory = 'X';
+    }
+    \end{minted}
 
 \section{Kompilacija}
+To C datoteko je treba prevesti v računalniku razumljivo kodo. Za to bom uporabil progam gcc.
+Da bo prevajanje potekalo lažje sem si naredil Makefile, to je datoteka, v katero zapišem načrt
+kako bo potekalo prevajanje in povezovanje mojega programa.
+\inputminted{make}{../Makefile}
 
 \chapter{Sklep}
 Repozitorij: \url{https://github.com/Golobii/matura-os}
