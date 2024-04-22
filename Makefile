@@ -7,7 +7,7 @@ EMULATOR=qemu-system-x86_64
 # Zastavice za prevajalnik
 CFLAGS = -m32 -fno-pie -g -nostdlib -Wall -Wextra -ffreestanding
 # Zastavice za emulator
-EFLAGS = -s -fda
+EFLAGS = -fda
 # Zastavice za povezovalnik
 LFLAGS = -m elf_i386 -Ttext 0x1000 --entry kernel --oformat binary
 
